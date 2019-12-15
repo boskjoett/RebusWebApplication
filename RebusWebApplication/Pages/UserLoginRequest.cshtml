@@ -1,0 +1,14 @@
+﻿@page
+@model RebusWebApplication.UserLoginRequestModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "LoginRequest";
+}
+
+<h1>Publish UserLoginRequest Message</h1>
+
+<form method="post">
+    Email:
+    <input asp-for="Email" />
+    <input type="submit" />
+</form>
