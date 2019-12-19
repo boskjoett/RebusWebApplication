@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using Rebus.Bus;
 using Zylinc.Common.MessageBus.Messages.RequestResponses.Organization;
 
 namespace RebusWebApplication
@@ -14,7 +15,7 @@ namespace RebusWebApplication
         [BindProperty]
         public string Email { get; set; }
 
-        public UserLoginRequestModel(ILogger<UserLoginRequestModel> logger)
+        public UserLoginRequestModel(IBus messageBus, ILogger<UserLoginRequestModel> logger)
         {
             _logger = logger;
         }
