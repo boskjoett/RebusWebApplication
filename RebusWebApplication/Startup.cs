@@ -14,7 +14,7 @@ namespace RebusWebApplication
 {
     public class Startup
     {
-        private const string InputQueueName = "RebusWebApplication";
+        public const string InputQueueName = "RebusWebApplication";
 
         private readonly ILoggerFactory _loggerFactory;
 
